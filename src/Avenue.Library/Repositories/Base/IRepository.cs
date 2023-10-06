@@ -1,7 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Query;
-using System.Linq.Expressions;
-
-namespace Avenue.Library.Repositories.Base
+﻿namespace Avenue.Library.Repositories.Base
 {
 	public interface IRepository<T> where T : class
 	{

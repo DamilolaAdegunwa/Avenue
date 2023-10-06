@@ -1,3 +1,4 @@
+//using Avenue.Library.Repositories.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Avenue.Api.Controllers
@@ -6,16 +7,22 @@ namespace Avenue.Api.Controllers
 	[Route("[controller]")]
 	public class WeatherForecastController : ControllerBase
 	{
+		//private readonly IBlogRepository _blogRepository;
 		private static readonly string[] Summaries = new[]
 		{
-		"Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-	};
-
+			"Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+		};
 		private readonly ILogger<WeatherForecastController> _logger;
 
-		public WeatherForecastController(ILogger<WeatherForecastController> logger)
+		public WeatherForecastController(
+			ILogger<WeatherForecastController> logger
+			/*, IBlogRepository blogRepository*/
+			)
 		{
 			_logger = logger;
+			//_blogRepository = blogRepository;
+			//_blogRepository.Test4b();
+			_ = "";
 		}
 
 		[HttpGet(Name = "GetWeatherForecast")]

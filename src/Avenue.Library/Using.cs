@@ -9,7 +9,6 @@ global using Microsoft.EntityFrameworkCore;
 global using Newtonsoft.Json;
 global using Avenue.Library.Repositories.Base;
 global using Avenue.Library.Persistence;
-global using Avenue.Library.Repositories.Contracts;
 global using System.ComponentModel.DataAnnotations.Schema;
 global using System.ComponentModel.DataAnnotations;
 global using System.Text.Json.Serialization;
